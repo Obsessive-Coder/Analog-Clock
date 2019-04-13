@@ -38,7 +38,7 @@ export default class App extends Component {
           <img
             src={clockImage}
             alt="clock background"
-            className="clock-image"
+            className="circle clock-image"
           />
         </div>
         <Moment

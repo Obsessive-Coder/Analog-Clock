@@ -12,6 +12,7 @@
 .clock-image {
   width: 50vw;
   max-height: 50vw;
+  box-shadow: inset 0 0 50px 1px rgb(132, 132, 218);
 }
 
 .clock-container {
