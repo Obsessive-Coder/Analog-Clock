@@ -7,6 +7,7 @@ export default function CreatorName(props) {
         Created by&nbsp;
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="http://www.jaredhuffstutler.com"
         >
           Jared Huffstutler
@@ -15,6 +16,7 @@ export default function CreatorName(props) {
       <small>
         <a
           href="mailto:jaredhuffstutler@email.arizona.edu"
+          rel="noopener noreferrer"
           className="email-link"
         >
           jaredhuff85@gmail.com

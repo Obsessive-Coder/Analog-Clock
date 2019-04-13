@@ -11,7 +11,7 @@
 
 .clock-image {
   width: 40vw;
-  max-height: 40vw;
+  height: 40vw;
   box-shadow: inset 0 0 50px 1px rgb(132, 132, 218);
 }
 
@@ -69,4 +69,16 @@
 
 .moment {
   display: none;
+}
+
+@media only screen and (max-width: 648px){
+  .clock-image {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .clock-body {
+    width: 70vw;
+    height: 70vw;
+  }
 }
