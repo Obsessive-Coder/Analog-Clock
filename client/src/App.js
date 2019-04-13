@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Clock from './components/Clock';
 import moment from 'moment';
 import Moment from 'react-moment';
-import clockImage from './clock-3127298_1920.jpg';
+import clockImage from './bg-clock.png';
 import './App.css';
 
 export default class App extends Component {
@@ -32,21 +32,22 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="clock-container">
-        <Clock />
+      <Fragment>
+        <div className="clock-container">
+          <Clock />
+          <img
+            src={clockImage}
+            alt="clock background"
+            className="clock-image"
+          />
+        </div>
         <Moment
           interval={1000}
           format="hh:mm:ss a"
           onChange={this.setClockHandDegrees}
           className="centered-setup moment"
         />
-        <img
-          src={clockImage}
-          alt="clock"
-          style={{maxHeight: '600px', width: '100%'}}
-          className=""
-        />
-      </div>
+      </Fragment>
     );
   }
 }
