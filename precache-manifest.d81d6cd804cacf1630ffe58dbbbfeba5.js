@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/Analog-Clock/static/js/runtime~main.2626a4f2.js"
   },
   {
-    "revision": "1ff22675dcc473b44bea",
-    "url": "/Analog-Clock/static/js/main.62805804.chunk.js"
+    "revision": "7479ebe25e837b51374e",
+    "url": "/Analog-Clock/static/js/main.0e0000c9.chunk.js"
   },
   {
     "revision": "452175046309a269ba30",
     "url": "/Analog-Clock/static/js/2.1d74ea9e.chunk.js"
   },
   {
-    "revision": "1ff22675dcc473b44bea",
-    "url": "/Analog-Clock/static/css/main.3b3533d0.chunk.css"
+    "revision": "7479ebe25e837b51374e",
+    "url": "/Analog-Clock/static/css/main.c17b512f.chunk.css"
   },
   {
-    "revision": "047c4de27782a9628d0a1cd3f8408bc0",
+    "revision": "856b37e4dffacda866d14b5362f950ea",
     "url": "/Analog-Clock/index.html"
   }
 ];
