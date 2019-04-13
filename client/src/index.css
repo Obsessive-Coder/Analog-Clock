@@ -1,12 +1,13 @@
 body {
   margin: 0;
-  padding: 5em;
+  padding: 3em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: radial-gradient(circle, rgb(223, 234, 238), rgb(176, 203, 212), rgb(173, 215, 230), rgb(146, 146, 231));
+  background-repeat: no-repeat;
 }
 
 code {
