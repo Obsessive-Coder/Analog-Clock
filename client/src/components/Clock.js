@@ -1,13 +1,17 @@
 import React from 'react';
-import ClockHand from './ClockHand';
+import ClockBody from './ClockBody';
+import clockImage from '../clock-image.png';
+
 
 export default function Clock(props) {
   return (
-    <div className="circle clock-body">
-      <ClockHand type="second" />
-      <ClockHand type="minute" />
-      <ClockHand type="hour" />
-      <div className="circle centered-setup clock-center"></div>
+    <div className="clock-container">
+      <ClockBody />
+      <img
+        src={clockImage}
+        alt="clock background"
+        className="circle clock-image"
+      />
     </div>
   );
 }
