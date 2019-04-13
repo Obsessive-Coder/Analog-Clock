@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Obsessive-Coder/Analog-Clock",
+  "homepage": "https://obsessive-coder.github.io/Analog-Clock/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "moment": "^2.24.0",
