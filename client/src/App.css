@@ -1,3 +1,14 @@
+.circle {
+  border-radius: 50%;
+}
+
+.centered-setup {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
 .clock-container {
   display: flex;
   align-items: center;
@@ -5,24 +16,53 @@
 }
 
 .clock-body {
-  width: 50vw;
-  height: 50vw;
-  border-radius: 50%;
-  position: relative;
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  border: thin solid lightblue;
+  /* background-color: grey; */
+  /* margin-top: 3em; */
+}
+
+.clock-center {
+  width: 4vw;
+  height: 4vw;
+  background-color: black;
+  top: 50%;
+  z-index: 4;
 }
 
 .clock-hand {
-  position: absolute;
   bottom: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  transform-origin: bottom center;
+  transform-origin: center bottom;
+  border-radius: 50% 50% 0 0;
 }
 
 .second-hand, .minute-hand {
-  height: 35vh;
+  height: 45%;
+}
+
+.second-hand {
+  width: 1%;
+  background-color: black;
+  z-index: 3;
+}
+
+.minute-hand {
+  width: 2%;
+  background-color: blue;
+  z-index: 2;
 }
 
 .hour-hand {
-  height: 25vh;
+  width: 4%;
+  height: 35%;
+  background-color: yellow;
+  z-index: 0.75;
+}
+
+.moment {
+  display: block;
+  align-self: flex-end;  /* padding-bottom: 1em; */
+  font-size: 5vw;
 }

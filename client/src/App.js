@@ -1,64 +1,52 @@
 import React, { Component } from 'react';
-import './App.css';
+import Clock from './components/Clock';
 import moment from 'moment';
 import Moment from 'react-moment';
-import clockHand from './clock-hand.png';
+import clockImage from './clock-3127298_1920.jpg';
+import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    // Bind class methods.
-    this.setClockHandDegrees = this.setClockHandDegrees.bind(this);
-    this.setHandDegree = this.setHandDegree.bind(this);
-  }
-
-  setClockHandDegrees() {
+export default class App extends Component {
+  setClockHandDegrees = () => {
+    // Set the degree of each clock hand.
     this.setHandDegree('second-hand', 'second');
     this.setHandDegree('minute-hand', 'minute');
     this.setHandDegree('hour-hand', 'hour');
   }
 
-  setHandDegree(elementId, type) {
+  setHandDegree = (elementId, type) => {
     const currentTime = moment();
-    const degreeAmount = type === 'hour' ? 30 : 6;
-    const handDegree = currentTime[type]() * degreeAmount;
+    // Minute and second hand degrees.
+    let handDegree = currentTime[type]() * 6;
+    // If the hand type is "hour" then get the degrees.
+    if (type === 'hour') {
+      handDegree = this.getHourDegree(currentTime.hour(), currentTime.minute());
+    }
     document.getElementById(elementId).style.transform = `rotate(${handDegree}deg)`;
+  }
+
+  getHourDegree = (hour, minute) => {
+    // Return the degree for the hour hand taking into account the minutes.
+    const hourDegree = hour * 30;
+    return hourDegree + (minute / 60) * 30;
   }
 
   render() {
     return (
-      <React.Fragment>
-        <div className="clock-container">
-          <div
-            className="my-5 bg-light border border-dark clock-body">
-            <img
-              id="second-hand"
-              src={clockHand}
-              alt="second hand"
-              className="clock-hand second-hand"
-            />
-            <img
-              id="minute-hand"
-              src={clockHand}
-              alt="minute hand"
-              className="clock-hand minute-hand"
-            />
-            <img
-              id="hour-hand"
-              src={clockHand}
-              alt="hour hand"
-              className="clock-hand hour-hand"
-            />
-          </div>
-        </div>
+      <div className="clock-container">
+        <Clock />
         <Moment
           interval={1000}
+          format="hh:mm:ss a"
           onChange={this.setClockHandDegrees}
+          className="centered-setup moment"
         />
-      </React.Fragment>
+        <img
+          src={clockImage}
+          alt="clock"
+          style={{maxHeight: '600px', width: '100%'}}
+          className=""
+        />
+      </div>
     );
   }
 }
-
-export default App;
