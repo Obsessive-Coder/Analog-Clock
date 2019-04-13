@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Clock from './components/Clock';
 import moment from 'moment';
 import Moment from 'react-moment';
-import clockImage from './bg-clock.png';
+import clockImage from './clock-image.png';
 import './App.css';
 
 export default class App extends Component {
