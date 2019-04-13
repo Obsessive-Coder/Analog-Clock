@@ -1,0 +1,10 @@
+.clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-body {
+  width: 50vw;
+  height: 50vw;
+}
