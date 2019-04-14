@@ -4,4 +4,4 @@
 
 An analog clock that uses React.js and Moment.js.
 
-![](example.gif)
+[![](example.gif)](https://obsessive-coder.github.io/Analog-Clock/)
